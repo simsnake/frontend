@@ -10,6 +10,7 @@ import * as themes from './theme/schema.json';
 import { setToLS } from './utils/storage';
 import Root from "./routes/root";
 import Themes from "./routes/themes";
+import Editor from "./routes/texteditor";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       {
         path: "themes",
         element: <Themes />,
-      }
+      },
+      {
+        path: "text-editor",
+        elememt: <Editor />,
+      },
     ]
   }
 

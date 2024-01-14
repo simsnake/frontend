@@ -1,19 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header';
+import logo from '../logo.svg';
+import '../App.css';
+import Header from '../components/Header';
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
 import WebFont from 'webfontloader';
-import { GlobalStyles } from './theme/GlobalStyles';
-import { useTheme } from './theme/useTheme';
-import Block from './components/Block';
+import { GlobalStyles } from '../theme/GlobalStyles';
+import { useTheme } from '../theme/useTheme';
+import Block from '../components/Block';
 
 const Container = styled.div`
   margin: 5px auto 5px auto;
 `;
 
-
-function App() {
+function Editor() {
   // 3: Get the selected theme, font list, etc.
   const { theme, themeLoaded, getFonts } = useTheme();
   const [selectedTheme, setSelectedTheme] = useState(theme);
@@ -37,11 +36,7 @@ function App() {
         themeLoaded && <ThemeProvider theme={selectedTheme}>
           <GlobalStyles />
           <Container style={{ fontFamily: selectedTheme.font }}>
-            <div className="App">
-              <div className="topMenu"></div>
-              <Block idString="block1" headerString="header1" />
-              <Block idString="block2" headerString="header2" />
-            </div>
+              <p>theme page content</p>
           </Container>
         </ThemeProvider>
       }
@@ -50,5 +45,4 @@ function App() {
 }
 
 
-
-export default App;
+export default Editor;
