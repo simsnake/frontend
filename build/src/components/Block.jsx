@@ -1,9 +1,12 @@
 import './rect.css'
 import { deleteBlock } from '../App';
+import { useState } from "react";
 let Draggable = require('react-draggable');
 let DraggableCore = Draggable.DraggableCore;
 
+
 const Block = (props) => {
+    const [blockValue, setBlockValue] = useState('');
     return (
         <Draggable class="Rect">
             <div class="Rect" id={props.blockID}>
@@ -12,7 +15,11 @@ const Block = (props) => {
                 <div id="Options">
                     <div class="dropdown">
                         <button class="deletebtn" onclick={() => deleteSelf(props.blockID)}>Delete</button>
-
+                        <input class="inputBox" type="text" placeholder="enter an equation" value={blockValue}
+                            onChange={({ target }) => {
+                                setBlockValue(target.value);
+                                //onsole.log(target.value);
+                            }} />
                     </div>
                 </div>
             </div >
