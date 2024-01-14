@@ -17,16 +17,7 @@ export const menuItemsData = [
         submenu: [
             {
                 title: 'Themes',
-                submenu: [
-                    {
-                        title: 'Light',
-                        url: 'light',
-                    },
-                    {
-                        title: 'Dark',
-                        url: 'dark',
-                    }
-                ]
+                url: 'themes',
             }
         ]
     },
@@ -38,7 +29,6 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: "Source Default",
-                        url: 'source-default',
                     }
                 ]
             },
@@ -47,7 +37,6 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: 'Sink Default',
-                        url: 'sink-default',
                     }
                 ]
             },
@@ -56,7 +45,6 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: 'Other Default',
-                        url: 'other-default',
                     }
                 ]
             },

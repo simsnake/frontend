@@ -9,19 +9,10 @@ function App() {
   return (
     <div className="App">
       <div className="topMenu">
-        <Header />
-
       </div>
     </div>
   )
 }
 
-function dark() {
-  document.body.setAttribute("data-theme", "dark-theme");
-}
-
-function openPreferences() {
-
-}
 
 export default App;

@@ -4,11 +4,44 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./routes/root";
+import Editor from "./routes/Editor";
+import Load from "./routes/Load";
+import Save from "./routes/Save";
+import Themes from "./routes/Themes"
 
+const router = createBrowserRouter([
+  {
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "text-editor",
+        element: <Editor />,
+      },
+      {
+        path: "load",
+        element: <Load />,
+      },
+      {
+        path: "save",
+        element: <Save />,
+      },
+      {
+        path: "themes",
+        element: <Themes />,
+      }
+    ]
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
