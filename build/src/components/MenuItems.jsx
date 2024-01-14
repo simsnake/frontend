@@ -38,4 +38,5 @@ const MenuItems = ({ items, depthLevel }) => {
     );
 };
 
+
 export default MenuItems;

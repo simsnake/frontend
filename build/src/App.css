@@ -4,13 +4,45 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #ffffff;
+  --header-text-color: #000000;
+  --topmenu-background-color: #ffffff;
+  --hovering-background-color: #cdcdcd;
+  --dropdown-background-color: #ffffff;
+}
+
+body [data-theme="light-theme"] {
+  --bg-color: #ffffff;
+  --header-text-color: #000000;
+  --topmenu-background-color: #ffffff;
+  --hovering-background-color: #cdcdcd;
+  --dropdown-background-color: #ffffff;
+}
+
+body [data-theme="dark-theme"] {
+  --bg-color: #2a2a2a;
+  --header-text-color: #ffffff;
+  --topmenu-background-color: #2a2a2a;
+  --hovering-background-color: #888888;
+  --dropdown-background-color: #2a2a2a;
+}
+
 body {
   font-family: "Agency FB";
+  /*background color*/
+  background-color: var(--bg-color);
 }
 
 header {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  color: #212529;
+  /*header text color*/
+  color: var(--header-text-color);
+}
+
+.topMenu{
+  /*topmenu background color*/
+  background-color: var(--topmenu-background-color);
 }
 
 .nav-area {
@@ -73,7 +105,8 @@ header {
 
 .desktop-nav .menu-items a:hover,
 .desktop-nav .menu-items button:hover {
-  background-color: #ffffff;
+  /*background color when hovering over item*/
+  background-color: var(--hovering-background-color);
 }
 
 .desktop-nav .arrow::after {
@@ -97,7 +130,8 @@ header {
   min-width: 10rem;
   padding: 0.5rem 0;
   list-style: none;
-  background-color: #fff;
+  /* dropdown background color*/
+  background-color: var(--dropdown-background-color);
   border-radius: 0.5rem;
   display: none;
 }

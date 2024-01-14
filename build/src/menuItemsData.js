@@ -4,9 +4,11 @@ export const menuItemsData = [
         submenu: [
             {
                 title: 'Save',
+                url: 'save',
             },
             {
                 title: 'Load',
+                url: 'load',
             }
         ]
     },
@@ -18,9 +20,11 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: 'Light',
+                        url: 'light',
                     },
                     {
                         title: 'Dark',
+                        url: 'dark',
                     }
                 ]
             }
@@ -28,13 +32,13 @@ export const menuItemsData = [
     },
     {
         title: 'Blocks',
-        url: '/blocks',
         submenu: [
             {
                 title: 'Source Blocks',
                 submenu: [
                     {
                         title: "Source Default",
+                        url: 'source-default',
                     }
                 ]
             },
@@ -43,6 +47,7 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: 'Sink Default',
+                        url: 'sink-default',
                     }
                 ]
             },
@@ -51,6 +56,7 @@ export const menuItemsData = [
                 submenu: [
                     {
                         title: 'Other Default',
+                        url: 'other-default',
                     }
                 ]
             },
@@ -61,7 +67,9 @@ export const menuItemsData = [
         submenu: [
             {
                 title: 'Text Editor',
+                url: 'text-editor',
             }
         ]
     }
 ]
+
