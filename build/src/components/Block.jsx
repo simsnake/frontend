@@ -1,23 +1,27 @@
 import './rect.css'
+let Draggable = require('react-draggable');
+let DraggableCore = Draggable.DraggableCore;
 
-const Block = (idString, headerString) => {
+const Block = () => {
     return (
-        <div className="Rect" id={idString} onMouseDown={() => dragElement(document.getElementById(idString), headerString)}>
-            <div className="Rectheader" id={headerString}>Click here to move</div>
-            <p>Moveable</p>
-            <div id="Options">
-                <div class="dropdown">
-                    <button class="dropbtn">i</button>
-                    <div class="dropdown-content">
-                        <label for="var1">Variable1: </label>
-                        <input type="text" id="var1" name="var1" /><br></br>
-                        <label for="var2">Variable2: </label>
-                        <input type="text" id="var2" name="var2" /><br></br>
-                        <button onclick="Submit()">Submit</button>
+        <Draggable>
+            <div id="Rect">
+                <div id="Rectheader">Click here to move</div>
+                <p>Moveable</p>
+                <div id="Options">
+                    <div class="dropdown">
+                        <button class="dropbtn">i</button>
+                        <div class="dropdown-content">
+                            <label for="var1">Variable1: </label>
+                            <input type="text" id="var1" name="var1" /><br></br>
+                            <label for="var2">Variable2: </label>
+                            <input type="text" id="var2" name="var2" /><br></br>
+                            <button onclick="Submit()">Submit</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div >
+            </div >
+        </Draggable>
 
     );
 
@@ -77,6 +81,7 @@ function dragElement(elmnt, hd) {
         document.onmousemove = null;
     }
 }
+
 
 function Submit() {
     let var1 = document.querySelector("#var1");
