@@ -1,20 +1,41 @@
 //Make the DIV element draggagle:
 dragElement(document.getElementById("Rect"));
-
+var i = 0;
+/*
+var x = document.getElementsByClassName("Duplicate")
+for(var j=0; x.length; j++){
+    dragElement(x[i]);
+}
+*/
+document.getEleme
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
     /* if present, the header is where you move the DIV from:*/
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
   }
 
+
+
+
+
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
+
     // get the mouse cursor position at startup:
+    /*
+    var original = document.getElementById("Duplicate");
+    var clone = original.cloneNode(true); // "deep" clone
+    clone.id = "Duplicate" + ++i;
+    // or clone.id = ""; if the divs don't need an ID
+    original.parentNode.appendChild(clone);
+    */
+    
     pos3 = e.clientX;
     pos4 = e.clientY;
     document.onmouseup = closeDragElement;
@@ -40,4 +61,10 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+function Submit(){
+    let var1 = document.querySelector("#var1");
+    let var2=document.querySelector("#var2");
+    alert(var1.value)
 }
