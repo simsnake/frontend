@@ -1,5 +1,5 @@
 /* rectangle stuff, probably temporary*/
-#Rect {
+.Rect {
     height: 120px;
     width: 250px;
     /*width: 100px;*/
@@ -10,7 +10,7 @@
     text-align: center;
   }
   
-  #Rectheader {
+  .Rectheader {
     padding: 5px 50px 5px 50px;
     cursor: move;
     z-index: 10;

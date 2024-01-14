@@ -39,7 +39,8 @@ function App() {
           <Container style={{ fontFamily: selectedTheme.font }}>
             <div className="App">
               <div className="topMenu"></div>
-              <Block />
+              <Block idString="block1" headerString="header1" />
+              <Block idString="block2" headerString="header2" />
             </div>
           </Container>
         </ThemeProvider>
