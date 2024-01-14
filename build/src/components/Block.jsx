@@ -1,23 +1,18 @@
 import './rect.css'
+import { deleteBlock } from '../App';
 let Draggable = require('react-draggable');
 let DraggableCore = Draggable.DraggableCore;
 
-const Block = () => {
+const Block = (props) => {
     return (
         <Draggable class="Rect">
-            <div id="Rect">
+            <div class="Rect" id={props.blockID}>
                 <div class="Rectheader">Click here to move</div>
-                <p>Moveable</p>
+
                 <div id="Options">
                     <div class="dropdown">
-                        <button class="dropbtn">i</button>
-                        <div class="dropdown-content">
-                            <label for="var1">Variable1: </label>
-                            <input type="text" id="var1" name="var1" /><br></br>
-                            <label for="var2">Variable2: </label>
-                            <input type="text" id="var2" name="var2" /><br></br>
-                            <button onclick={Submit}>Submit</button>
-                        </div>
+                        <button class="deletebtn" onclick={() => deleteSelf(props.blockID)}>Delete</button>
+
                     </div>
                 </div>
             </div >
@@ -31,6 +26,12 @@ function Submit() {
     let var1 = document.querySelector("#var1");
     let var2 = document.querySelector("#var2");
     alert(var1.value)
+}
+
+function deleteSelf(id) {
+    console.log('q232131231');
+    document.getElementById(id).remove();
+    deleteBlock(id);
 }
 
 export default Block;

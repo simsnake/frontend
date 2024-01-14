@@ -43,7 +43,7 @@ function App() {
               <div className="mainArea">
                 <ul>
                   {blocks.map(block => (
-                    <Block id={block}></Block>
+                    <Block blockID={block}></Block>
                   ))}
                 </ul>
               </div>
@@ -62,6 +62,18 @@ export function spawnBlock() {
 
 }
 
+export function deleteBlock(id) {
+  blocks = arrayRemove(blocks, id);
+}
+
+
+function arrayRemove(arr, value) {
+
+  return arr.filter(function (geeks) {
+    return geeks != value;
+  });
+
+}
 
 
 

@@ -10,6 +10,16 @@
     border: 1px solid #d3d3d3;
     text-align: center;
 }
+.react-draggable {
+  height: 120px;
+    width: 250px;
+    /*width: 100px;*/
+    /*position: absolute;*/
+    z-index: 9;
+    background-color: #2196F3;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+}
 .Rect {
     height: 120px;
     width: 250px;
@@ -42,6 +52,10 @@
     background-color: #2196F3;
     color: #fff;
     
+  }
+
+  .deletebtn {
+    margin-bottom: 100;
   }
   .dropbtn {
     background-color: #f5852a;
