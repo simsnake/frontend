@@ -5,7 +5,6 @@ import React from 'react';
 import Block from './components/Block';
 
 
-var blocks = [];
 
 function App() {
 
@@ -14,26 +13,13 @@ function App() {
       {
             <div className="App">
               <div className="topMenu"></div>
-              <div className="mainArea">
-                <ul>
-                  {blocks.map(block => (
-                    <Block id={block}></Block>
-                  ))}
-                </ul>
-              </div>
+              <Block idString="block1" headerString="header1" />
+              <Block idString="block2" headerString="header2" />
             </div>
       }
     </>
   );
 }
-
-export function spawnBlock() {
-  const name = "block" + blocks.length;
-  blocks.push(name);
-
-}
-
-
 
 
 
