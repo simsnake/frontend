@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
 import WebFont from 'webfontloader';
 import { GlobalStyles } from './theme/GlobalStyles';
-import {useTheme} from './theme/useTheme';
+import { useTheme } from './theme/useTheme';
 
 const Container = styled.div`
   margin: 5px auto 5px auto;
@@ -14,12 +14,12 @@ const Container = styled.div`
 
 function App() {
   // 3: Get the selected theme, font list, etc.
-  const {theme, themeLoaded, getFonts} = useTheme();
+  const { theme, themeLoaded, getFonts } = useTheme();
   const [selectedTheme, setSelectedTheme] = useState(theme);
 
   useEffect(() => {
     setSelectedTheme(theme);
-   }, [theme, themeLoaded]);
+  }, [theme, themeLoaded]);
 
   // 4: Load all the fonts
   useEffect(() => {
@@ -32,18 +32,18 @@ function App() {
 
   return (
     <>
-    {
-      themeLoaded && <ThemeProvider theme={ selectedTheme }>
-      <GlobalStyles/>
-      <Container style={{fontFamily: selectedTheme.font}}>
-      <div className="App">
-      <div className="topMenu">
-        <Header />
-      </div>
-    </div>
-    </Container>
-    </ThemeProvider>
-    }
+      {
+        themeLoaded && <ThemeProvider theme={selectedTheme}>
+          <GlobalStyles />
+          <Container style={{ fontFamily: selectedTheme.font }}>
+            <div className="App">
+              <div className="topMenu">
+
+              </div>
+            </div>
+          </Container>
+        </ThemeProvider>
+      }
     </>
   );
 }

@@ -32,11 +32,19 @@ const MenuItems = ({ items, depthLevel }) => {
                     <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
                 </>
             ) : (
-                <a href={items.url}>{items.title}</a>
+                items.url ? (
+                    <a href={items.url}>{items.title}</a>
+                ) : (
+                    <button onClick={() => buttonAction(items.title)}>{items.title}</button>
+                )
             )}
         </li>
     );
 };
+
+function buttonAction(title) {
+
+}
 
 
 export default MenuItems;
