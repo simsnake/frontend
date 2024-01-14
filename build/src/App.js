@@ -21,7 +21,6 @@ function App() {
   );
 }
 
-
 export function spawnBlock() {
   const name = "block" + blocks.length;
   blocks.push(name);
