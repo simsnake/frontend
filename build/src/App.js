@@ -12,16 +12,16 @@ function App() {
   return (
     <>
       {
-            <div className="App">
-              <div className="topMenu"></div>
-              <div className="mainArea">
-                <ul>
-                  {blocks.map(block => (
-                    <Block id={block}></Block>
-                  ))}
-                </ul>
-              </div>
-            </div>
+        <div className="App">
+          <div className="topMenu"></div>
+          <div className="mainArea">
+            <ul>
+              {blocks.map(block => (
+                <Block className={block}></Block>
+              ))}
+            </ul>
+          </div>
+        </div >
       }
     </>
   );
@@ -31,7 +31,7 @@ function App() {
 export function spawnBlock() {
   const name = "block" + blocks.length;
   blocks.push(name);
-
+  console.log(blocks.length);
 }
 
 
