@@ -7,7 +7,7 @@ for(var j=0; x.length; j++){
     dragElement(x[i]);
 }
 */
-document.getEleme
+
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
@@ -35,7 +35,7 @@ function dragElement(elmnt) {
     // or clone.id = ""; if the divs don't need an ID
     original.parentNode.appendChild(clone);
     */
-    
+
     pos3 = e.clientX;
     pos4 = e.clientY;
     document.onmouseup = closeDragElement;
@@ -63,8 +63,8 @@ function dragElement(elmnt) {
   }
 }
 
-function Submit(){
-    let var1 = document.querySelector("#var1");
-    let var2=document.querySelector("#var2");
-    alert(var1.value)
+function Submit() {
+  let var1 = document.querySelector("#var1");
+  let var2 = document.querySelector("#var2");
+  alert(var1.value)
 }

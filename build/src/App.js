@@ -6,6 +6,7 @@ import styled, { ThemeProvider } from "styled-components";
 import WebFont from 'webfontloader';
 import { GlobalStyles } from './theme/GlobalStyles';
 import { useTheme } from './theme/useTheme';
+import Block from './components/Block';
 
 const Container = styled.div`
   margin: 5px auto 5px auto;
@@ -37,9 +38,8 @@ function App() {
           <GlobalStyles />
           <Container style={{ fontFamily: selectedTheme.font }}>
             <div className="App">
-              <div className="topMenu">
-
-              </div>
+              <div className="topMenu"></div>
+              <Block />
             </div>
           </Container>
         </ThemeProvider>
