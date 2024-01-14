@@ -49,11 +49,12 @@ function App() {
               </div>
             </div>
           </Container>
-        </ThemeProvider>
+        </ThemeProvider >
       }
     </>
   );
 }
+
 
 export function spawnBlock() {
   const name = "block" + blocks.length;
